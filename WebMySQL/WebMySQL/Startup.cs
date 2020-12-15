@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebMySQL.Models;
 
 namespace WebMySQL
 {
@@ -23,7 +25,8 @@ namespace WebMySQL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string sringConexao = "Server=localhost;DataBase=WebMySQLAula;Uid=root;Pwd=1234";
+            string stringConexao = "Server=localhost;DataBase=DataBaseAula;Uid=root;Pwd=1234";
+            services.AddDbContext<Contexto>(options => options.UseMySQL(stringConexao));
 
             services.AddControllersWithViews();
         }

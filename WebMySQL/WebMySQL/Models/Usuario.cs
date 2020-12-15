@@ -22,6 +22,10 @@ namespace WebMySQL.Models
         [Column("Celular")]
         public string Celular { get; set; }
 
+        [Display(Name = "Email")]
+        [Column("Email")]
+        public string Email { get; set; }
+
 
     }
 }
