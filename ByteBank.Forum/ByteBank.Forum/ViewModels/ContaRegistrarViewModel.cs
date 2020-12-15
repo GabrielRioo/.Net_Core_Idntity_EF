@@ -17,7 +17,7 @@ namespace ByteBank.Forum.ViewModels
 
         [Required]
         [EmailAddress]
-        public string Emai { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
