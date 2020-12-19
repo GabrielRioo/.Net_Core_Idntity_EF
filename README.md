@@ -16,10 +16,12 @@
    * `[EmailAdress]`
 ---
 ### Informações
-* Registrar:
-   * Controller -> Model -> View
-   * **View**:
-      * `@using (Html.BeginForm()) { <hrml> }` - Inicializa o formulario
-      * `@Html.ValidationSummary("", new { @class = "text-danger" })` - Resultado da validação, mensagem de erro de parametros...
-      * `@Html.EditorForModel()` - Formulario para preencher
-      * `@Html.ActionLink("Mostrado ao usuario", "Action Controller", "Nome da Controller")`
+
+* Controller -> Model -> View
+* **View**:
+   * `@using (Html.BeginForm()) { <hrml> }` - Inicializa o formulario
+   * `@Html.ValidationSummary("", new { @class = "text-danger" })` - Resultado da validação, mensagem de erro de parametros...
+   * `@Html.EditorForModel()` - Formulario para preencher
+   * `@Html.ActionLink("Mostrado ao usuario", "Action Controller", "Nome da Controller")`
+* `ModelState.IsValid` - Valida se foi preenchido corretamente, campos obrigatorios, compo de email de acordo com formato esperado...
+* `dbContext` - Entity Framework
