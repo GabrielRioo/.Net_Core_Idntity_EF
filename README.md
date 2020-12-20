@@ -16,6 +16,12 @@
    * `[EmailAdress]`
 ---
 ### Informações
+#### Arquitetura:
+1. **Fonte de Dados(Data Source)** = Guarda os usuarios -> __SQL, MongoDB__
+1. **Acesso aos Dados(Data Access Layer)** -> __Entity Framework__ 
+1. **Fornecedor(Store)** = Manipula os usuarios dentro do Identity Framework -> __IUserStore__
+1. **Gerenciadores(Managers)** = Core do Identity -> __UserManager__
+1. **Aplicação** = Não lida com as aplicações do banco de dados -> __Forum ByteBank__
 
 * Controller -> Model -> View
 * **View**:
@@ -25,3 +31,26 @@
    * `@Html.ActionLink("Mostrado ao usuario", "Action Controller", "Nome da Controller")`
 * `ModelState.IsValid` - Valida se foi preenchido corretamente, campos obrigatorios, compo de email de acordo com formato esperado...
 * `dbContext` - Entity Framework
+* Aplicação .NET sempre dar preferencia para os metodos **Assincronos**
+* **Startup.cs** - Inicialização do Owin 
+
+* Web.config
+```
+    <connectionStrings>
+      		<add name="DefaultConnection" providerName="System.Data.SqlClient" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;Database=Bytebank.Forum;connection_trusted=true"/>
+    </connectionStrings>
+```
+* name="DefaultConnection" - nom padrao para aplicações asp net utilizando entity framework
+* providerName - Nome do Eniy Framework, localizando em:  `<providers>`
+* connectionString
+
+---
+
+### Referencias:
+* **Sysem.Web** = responsavel pela comunicação entre a aplicação ASP NET entre o servidor IIS Express
+* **Owin** = Ter mais dominio enre o que acontece entre aplicação e servidor. Se nao usa um recurso, nao pecisa instalar esse recurso.
+   * `Install-Package Microsoft.Owin.Host.SystemWeb -Version 3.1.0`
+* Comunicação entre o Identity  o Owin
+   * `Install-Package Microsoft.AspNet.Identity.Owin -Version 2.2.1`
+   
+   
