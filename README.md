@@ -32,6 +32,7 @@
 * `ModelState.IsValid` - Valida se foi preenchido corretamente, campos obrigatorios, compo de email de acordo com formato esperado...
 * `dbContext` - Entity Framework
 * Aplicação .NET sempre dar preferencia para os metodos **Assincronos**
+* **Startup.cs** - Inicialização do Owin 
 
 * Web.config
 ```
@@ -42,3 +43,14 @@
 * name="DefaultConnection" - nom padrao para aplicações asp net utilizando entity framework
 * providerName - Nome do Eniy Framework, localizando em:  `<providers>`
 * connectionString
+
+---
+
+### Referencias:
+* **Sysem.Web** = responsavel pela comunicação entre a aplicação ASP NET entre o servidor IIS Express
+* **Owin** = Ter mais dominio enre o que acontece entre aplicação e servidor. Se nao usa um recurso, nao pecisa instalar esse recurso.
+   * `Install-Package Microsoft.Owin.Host.SystemWeb -Version 3.1.0`
+* Comunicação entre o Identity  o Owin
+   * `Install-Package Microsoft.AspNet.Identity.Owin -Version 2.2.1`
+   
+   
