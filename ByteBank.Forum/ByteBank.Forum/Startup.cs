@@ -1,4 +1,5 @@
-﻿using ByteBank.Forum.Models;
+﻿using ByteBank.Forum.App_Start.Identity;
+using ByteBank.Forum.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -11,7 +12,7 @@ using System.Linq;
 using System.Web;
 
 // o tipo que está sendo utilizado pela inicialização do owin é o metodo startup
-[assembly: OwinStartup(typeof (ByteBank.Forum.Startup))]
+[assembly: OwinStartup(typeof(ByteBank.Forum.Startup))]
 
 namespace ByteBank.Forum
 {
@@ -23,12 +24,14 @@ namespace ByteBank.Forum
             builder.CreatePerOwinContext<DbContext>(() =>
                 new IdentityDbContext<UsuarioAplicacao>("DefaultConnection")); //a cada contexto do owin irá criar um tipo dbContext
 
-            builder.CreatePerOwinContext<IUserStore<UsuarioAplicacao>>((opcoes, contextoOwin) => {
+            builder.CreatePerOwinContext<IUserStore<UsuarioAplicacao>>((opcoes, contextoOwin) =>
+            {
                 var dbContext = contextoOwin.Get<DbContext>();
                 return new UserStore<UsuarioAplicacao>(dbContext);
             });
 
-            builder.CreatePerOwinContext<UserManager<UsuarioAplicacao>>((opcoes, contextoOwin) => {
+            builder.CreatePerOwinContext<UserManager<UsuarioAplicacao>>((opcoes, contextoOwin) =>
+            {
                 var userStore = contextoOwin.Get<IUserStore<UsuarioAplicacao>>();
                 var userManager = new UserManager<UsuarioAplicacao>(userStore);
                 var userValidator = new UserValidator<UsuarioAplicacao>(userManager);
@@ -36,6 +39,15 @@ namespace ByteBank.Forum
                 userValidator.RequireUniqueEmail = true;
 
                 userManager.UserValidator = userValidator;
+                userManager.PasswordValidator = new SenhaValidador()
+                {
+                    TamanhoRequerido = 6,
+                    ObrigatorioCarateresEspeciais = true,
+                    ObrigatorioDigitos = true,
+                    ObrigatorioLowerCase = true,
+                    ObrigatorioUpperCase = true
+                };
+
 
                 return userManager;
             });
