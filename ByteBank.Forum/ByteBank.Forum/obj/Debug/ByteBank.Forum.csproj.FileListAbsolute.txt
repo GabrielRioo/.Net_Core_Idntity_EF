@@ -186,3 +186,16 @@ C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\obj\Debug\B
 C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\obj\Debug\ByteBank.Forum.csproj.CopyComplete
 C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\obj\Debug\ByteBank.Forum.dll
 C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\obj\Debug\ByteBank.Forum.pdb
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.dll
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Security.dll
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Owin.dll
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.xml
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Security.xml
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Gabrieltmp\GitHub\Register_NET_CORE\ByteBank.Forum\ByteBank.Forum\bin\Microsoft.Owin.Security.OAuth.xml
